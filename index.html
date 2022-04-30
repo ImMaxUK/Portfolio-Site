@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Max • Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/css/style.css" />
+    <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script
+      defer
+      data-api="https://web.maxuk.me/api/log"
+      data-domain="maxuk.me"
+      src="https://web.maxuk.me/js/stats.js"
+      type="text/javascript"
+    ></script>
+  </head>
+  <body class="is-boxed has-animations">
+    <div class="body-wrap">
+      <header class="site-header">
+        <div class="container">
+          <div class="site-header-inner">
+            <div class="brand header-brand">
+              <h1 class="m-0">
+                <a href="#">
+                  <img
+                    class="header-logo-image"
+                    src="dist/images/logo.png"
+                    alt="Logo"
+                  />
+                </a>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="container">
+            <div class="hero-inner">
+              <div class="hero-copy">
+                <h1 class="hero-title mt-0">Hey, I'm Max! 👋</h1>
+                <p class="hero-paragraph">
+                  I'm a Javascript Developer and System Administrator!<br />I am
+                  currently taking commissions for Discord bot development.
+                </p>
+                <!-- Spotify Statistics -->
+                <div class="spotifyData" style="margin-bottom: 20px">
+                  <img
+                    src="dist/images/spotify-logo.svg"
+                    style="height: 30px; padding-right: 5px; display: inline;"
+                    alt="spotify"
+                  />
+                  <p
+                    style="
+                      color: #899499;
+                      display: inline;
+                      line-height: 6px;
+                      text-align: end;
+                    "
+                    id="spotifyData"
+                  >
+                    Loading Spotify Data...
+                  </p>
+                </div>
+                <script src="https://cdn.jsdelivr.net/gh/xaronnn/js-lanyard/lanyard.js"></script>
+                <script type="text/javascript">
+                  const spotifyDataElement =
+                    document.getElementById("spotifyData");
+                  var results = lanyard({
+                    userId: "866686984587313173",
+                    socket: true,
+                    onPresenceUpdate: (data) => {
+                      if (!data.listening_to_spotify)
+                        spotifyDataElement.innerText = "No music playing";
+
+                      var spotifyData = `${data.spotify.song}, ${data.spotify.artist}`;
+                      if (spotifyData.length > 40)
+                        spotifyData = spotifyData.substring(0, 40) + "...";
+
+                      spotifyDataElement.innerText = spotifyData;
+                    },
+                  });
+                </script>
+                <div class="hero-cta">
+                  <a
+                    class="button button-primary"
+                    target="_blank"
+                    href="https://s.maxuk.me/discord"
+                    >Get in touch</a
+                  ><a
+                    class="button"
+                    target="_blank"
+                    href="https://s.maxuk.me/github"
+                    >GitHub Account</a
+                  >
+                </div>
+              </div>
+              <div class="hero-figure anime-element">
+                <svg
+                  class="placeholder"
+                  width="528"
+                  height="396"
+                  viewBox="0 0 528 396"
+                >
+                  <rect width="528" height="396" style="fill: transparent" />
+                </svg>
+                <div
+                  class="hero-figure-box hero-figure-box-01"
+                  data-rotation="45deg"
+                ></div>
+                <div
+                  class="hero-figure-box hero-figure-box-02"
+                  data-rotation="-45deg"
+                ></div>
+                <div
+                  class="hero-figure-box hero-figure-box-03"
+                  data-rotation="0deg"
+                ></div>
+                <div
+                  class="hero-figure-box hero-figure-box-04"
+                  data-rotation="-135deg"
+                ></div>
+                <div class="hero-figure-box hero-figure-box-05"></div>
+                <div class="hero-figure-box hero-figure-box-06"></div>
+                <div class="hero-figure-box hero-figure-box-07"></div>
+                <div
+                  class="hero-figure-box hero-figure-box-08"
+                  data-rotation="-22deg"
+                ></div>
+                <div
+                  class="hero-figure-box hero-figure-box-09"
+                  data-rotation="-52deg"
+                ></div>
+                <div
+                  class="hero-figure-box hero-figure-box-10"
+                  data-rotation="-50deg"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="features section">
+            <div class="container">
+                <div class="features-inner section-inner has-bottom-divider">
+                    <div class="features-wrap">
+                        <div class="feature text-center is-revealing">
+                            <div class="feature-inner">
+                                <div class="feature-icon">
+                                    <img src="dist/images/feature-icon-01.svg" style="height: 100px;" alt="Feature 01">
+                                </div>
+                                <h4 class="feature-title mt-24">Customization</h4>
+                                <p class="text-sm mb-0">I always create my bots with customization in mind. Every message an end-user sees can be customized.</p>
+                            </div>
+                        </div>
+                        <div class="feature text-center is-revealing">
+                            <div class="feature-inner">
+                                <div class="feature-icon">
+                                    <img src="dist/images/feature-icon-02.svg" style="height: 100px;" alt="Feature 02">
+                                </div>
+                                <h4 class="feature-title mt-24">Revisions</h4>
+                                <p class="text-sm mb-0">Changed your mind last minute? Let me know as I am always happy to add anything new.</p>
+                            </div>
+                        </div>
+                        <div class="feature text-center is-revealing">
+                            <div class="feature-inner">
+                                <div class="feature-icon">
+                                    <img src="dist/images/feature-icon-03.svg" style="height: 100px;" alt="Feature 03">
+                                </div>
+                                <h4 class="feature-title mt-24">Price</h4>
+                                <p class="text-sm mb-0">I don't overcharge for my work, I try to suit everyone's budget wherever possible.</p>
+                            </div>
+                        </div>
+                        <div class="feature text-center is-revealing">
+                            <div class="feature-inner">
+                                <div class="feature-icon">
+                                    <img src="dist/images/feature-icon-04.svg" style="height: 100px;" alt="Feature 04">
+                                </div>
+                                <h4 class="feature-title mt-24">Up-to-date</h4>
+                                <p class="text-sm mb-0">Updates happen frequently, I stay on top of anything new and include it in my work, therefore you will always get the latest features with me.</p>
+                            </div>
+                        </div>
+                        <div class="feature text-center is-revealing">
+                            <div class="feature-inner">
+                                <div class="feature-icon">
+                                    <img src="dist/images/feature-icon-05.svg" style="height: 100px;" alt="Feature 05">
+                                </div>
+                                <h4 class="feature-title mt-24">Source</h4>
+                                <p class="text-sm mb-0">I don't obfuscate any of my work, which means you have full access to the code and can edit all aspects of your product.</p>
+                            </div>
+                        </div>
+                        <div class="feature text-center is-revealing">
+                            <div class="feature-inner">
+                                <div class="feature-icon">
+                                    <img src="dist/images/feature-icon-06.svg" style="height: 100px;" alt="Feature 06">
+                                </div>
+                                <h4 class="feature-title mt-24">Updates</h4>
+                                <p class="text-sm mb-0">I send regular updates to ensure you know what I'm doing, and aren't isolated from your product.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing section">
+            <div class="container-sm">
+                <div class="pricing-inner section-inner">
+                    <div class="pricing-header text-center">
+                        <h2 class="section-title mt-0">Starting Price</h2>
+                        <p class="section-paragraph mb-0">All my work will start at $5.<br />Take a look below to see what you get.</p>
+                    </div>
+                    <div class="pricing-tables-wrap">
+                        <div class="pricing-table">
+                            <div class="pricing-table-inner is-revealing">
+                                <div class="pricing-table-main">
+                                    <div class="pricing-table-header pb-24">
+                                        <div class="pricing-table-price"><span class="pricing-table-price-currency h2">$</span><span class="pricing-table-price-amount h1">5</span><span class="text-xs">/once</span></div>
+                                    </div>
+                                    <div class="pricing-table-features-title text-xs pt-24 pb-24">What you will get</div>
+                                    <ul class="pricing-table-features list-reset text-xs">
+                                        <li>
+                                            <span>Unlimited Revisions</span>
+                                        </li>
+                                        <li>
+                                            <span>1 Month FREE Hosting</span>
+                                        </li>
+                                        <li>
+                                            <span>Source Code</span>
+                                        </li>
+                                        <li>
+                                            <span>Regular Updates</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pricing-table-cta mb-8">
+                                    <a class="button button-primary button-shadow button-block" href="https://s.maxuk.me/discord" target="_blank">Enquire Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta section">
+            <div class="container">
+                <div class="cta-inner section-inner">
+                    <h3 class="section-title mt-0">Still not convinced?</h3>
+                    <div class="cta-cta">
+                        <a class="button button-primary button-wide-mobile" href="https://s.maxuk.me/discord" target="_blank">Get in touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+      <footer class="site-footer">
+        <div class="container">
+          <div class="site-footer-inner">
+            <div class="brand footer-brand">
+              <a href="#">
+                <img
+                  class="header-logo-image"
+                  src="dist/images/logo.png"
+                  alt="Logo"
+                />
+              </a>
+            </div>
+            <ul class="footer-links list-reset">
+              <li>
+                <a href="https://s.maxuk.me/discord">Contact</a>
+              </li>
+              <li>
+                <a href="https://dash.maxuk.me">Game Dashboard</a>
+              </li>
+            </ul>
+            <ul class="footer-social-links list-reset">
+              <li>
+                <a href="https://s.maxuk.me/github">
+                  <span class="screen-reader-text">GitHub</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
+                      fill="#0270D7"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://s.maxuk.me/twitter">
+                  <span class="screen-reader-text">Twitter</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z"
+                      fill="#0270D7"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <div class="footer-copyright">
+              &copy; 2022 Max, All Rights Reserved
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="dist/js/main.min.js"></script>
+  </body>
+</html>
