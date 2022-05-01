@@ -2029,7 +2029,7 @@ main {
     background: rgba(255, 82, 82, 1);
     box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
     animation: pulse-red 2s infinite;
-    border:3px solid rgba(255, 82, 82, 1);
+    border: 2px solid rgba(255, 82, 82, 1);
 }
 
 @keyframes pulse-red {
@@ -2053,7 +2053,7 @@ main {
     background: rgb(255, 188, 63, 1);
     box-shadow: 0 0 0 0 rgb(255, 188, 63, 1);
     animation: pulse-orange 2s infinite;
-    border:3px solid rgb(255, 188, 63, 1);
+    border: 2px solid rgb(255, 188, 63, 1);
 }
 
 @keyframes pulse-orange {
@@ -2077,7 +2077,7 @@ main {
     background: rgb(126, 126, 126);
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
     animation: pulse-white 2s infinite;
-    border:3px solid rgb(126, 126, 126);
+    border: 2px solid rgb(126, 126, 126);
 }
 
 @keyframes pulse-white {
@@ -2104,7 +2104,7 @@ main {
     margin: 10px;
     height: 48px;
     width: 48px;
-    border:3px solid;
+    border: 2px solid;
     transform: scale(1);
     animation: pulse-black 2s infinite;
 }
@@ -2113,7 +2113,7 @@ main {
     background: rgba(51, 217, 178, 1);
     box-shadow: 0 0 0 0 rgba(51, 217, 178, 1);
     animation: pulse-green 2s infinite;
-    border:3px solid rgba(51, 217, 178, 1);
+    border: 2px solid rgba(51, 217, 178, 1);
 }
 
 @keyframes pulse-green {
