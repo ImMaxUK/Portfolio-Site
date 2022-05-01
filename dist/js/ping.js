@@ -1,6 +1,5 @@
 const statusTag = document.getElementById("status");
-const spotifyDataElement =
-  document.getElementById("spotifyData");
+const spotifyDataElement = document.getElementById("spotifyData");
 var results = lanyard({
   userId: "866686984587313173",
   socket: true,
