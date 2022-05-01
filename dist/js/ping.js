@@ -1,9 +1,4 @@
 const statusTag = document.getElementById("status");
-lanyard({
-  userId: "866686984587313173",
-  socket: true,
-  onPresenceUpdate: console.log // presenceData
-})
 const spotifyDataElement =
   document.getElementById("spotifyData");
     var results = lanyard({
