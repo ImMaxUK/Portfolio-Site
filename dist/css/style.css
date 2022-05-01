@@ -2022,12 +2022,14 @@ main {
 
 .ping-text {
     font-weight: 900;
+    font-size: 18px;
 }
 
 .ping.dnd {
     background: rgba(255, 82, 82, 1);
     box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
     animation: pulse-red 2s infinite;
+    border:3px solid rgba(255, 82, 82, 1);
 }
 
 @keyframes pulse-red {
@@ -2048,15 +2050,16 @@ main {
 }
 
 .ping.idle {
-    background: rgba(255, 121, 63, 1);
-    box-shadow: 0 0 0 0 rgba(255, 121, 63, 1);
+    background: rgb(255, 188, 63, 1);
+    box-shadow: 0 0 0 0 rgb(255, 188, 63, 1);
     animation: pulse-orange 2s infinite;
+    border:3px solid rgb(255, 188, 63, 1);
 }
 
 @keyframes pulse-orange {
     0% {
         transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(255, 121, 63, 0.7);
+        box-shadow: 0 0 0 0 rgb(255, 188, 63, 0.7);
     }
 
     70% {
@@ -2074,6 +2077,7 @@ main {
     background: rgb(126, 126, 126);
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
     animation: pulse-white 2s infinite;
+    border:3px solid rgb(126, 126, 126);
 }
 
 @keyframes pulse-white {
@@ -2098,8 +2102,9 @@ main {
     border-radius: 50%;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
     margin: 10px;
-    height: 20px;
-    width: 20px;
+    height: 48px;
+    width: 48px;
+    border:3px solid;
     transform: scale(1);
     animation: pulse-black 2s infinite;
 }
@@ -2108,6 +2113,7 @@ main {
     background: rgba(51, 217, 178, 1);
     box-shadow: 0 0 0 0 rgba(51, 217, 178, 1);
     animation: pulse-green 2s infinite;
+    border:3px solid rgba(51, 217, 178, 1);
 }
 
 @keyframes pulse-green {
