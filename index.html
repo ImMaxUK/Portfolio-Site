@@ -78,25 +78,6 @@
                     Loading Spotify Data...
                   </p>
                 </div>
-                <script src="https://cdn.jsdelivr.net/gh/xaronnn/js-lanyard/lanyard.js"></script>
-                <script type="text/javascript">
-                  const spotifyDataElement =
-                    document.getElementById("spotifyData");
-                  var results = lanyard({
-                    userId: "866686984587313173",
-                    socket: true,
-                    onPresenceUpdate: (data) => {
-                      if (!data.listening_to_spotify)
-                        spotifyDataElement.innerText = "No music playing";
-
-                      var spotifyData = `${data.spotify.song}, ${data.spotify.artist}`;
-                      if (spotifyData.length > 40)
-                        spotifyData = spotifyData.substring(0, 40) + "...";
-
-                      spotifyDataElement.innerText = spotifyData;
-                    },
-                  });
-                </script>
                 <div class="hero-cta">
                   <a
                     class="button button-primary"
@@ -282,6 +263,8 @@
                   alt="Logo"
                 />
               </a>
+              <div id="status"></div>
+              <span id="text-status" class="ping-text"></span>
             </div>
             <ul class="footer-links list-reset">
               <li>
@@ -332,5 +315,8 @@
     </div>
 
     <script src="dist/js/main.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/gh/xaronnn/js-lanyard/lanyard.js"></script>
+    <script src="dist/js/ping.js"></script>
   </body>
 </html>
