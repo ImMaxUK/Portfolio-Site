@@ -17,7 +17,7 @@ const spotifyDataElement =
           statusTag.classList.remove('offline');
           statusTag.classList.add('ping');
           statusTag.classList.add('online');
-          document.getElementById('text-status').innerHTML = "Online!"; 
+          document.getElementById('text-status').innerHTML = "Online";
         }
         if (data.discord_status == "offline") {
           statusTag.classList.remove('ping-mobile');
@@ -26,7 +26,7 @@ const spotifyDataElement =
           statusTag.classList.remove('dnd');
           statusTag.classList.add('ping');
           statusTag.classList.add('offline');
-          document.getElementById('text-status').innerHTML = "Offline!";  
+          document.getElementById('text-status').innerHTML = "Offline";
         }
         if (data.discord_status == "dnd") {
           statusTag.classList.remove('ping-mobile');
@@ -35,7 +35,7 @@ const spotifyDataElement =
           statusTag.classList.remove('offline');
           statusTag.classList.add('ping');
           statusTag.classList.add('dnd');
-          document.getElementById('text-status').innerHTML = "Do Not Disturb!";  
+          document.getElementById('text-status').innerHTML = "Do Not Disturb";
         }
         if (data.discord_status == "idle") {
           statusTag.classList.remove('ping-mobile');
@@ -44,13 +44,13 @@ const spotifyDataElement =
           statusTag.classList.remove('offline');
           statusTag.classList.add('ping');
           statusTag.classList.add('idle');
-          document.getElementById('text-status').innerHTML = "Idle!";  
+          document.getElementById('text-status').innerHTML = "Idle";
         }
         if(!data.listening_to_spotify) {
           document.getElementById('spotifyData').innerHTML = "No Music Playing";
         }
         else {
-          var spotifyData = `${data.spotify.song}` + " , " + `${data.spotify.artist}`
+          var spotifyData = `${data.spotify.song}` + ", " + `${data.spotify.artist}`
           if(spotifyData.length > 40) spotifyData = spotifyData.substring(0, 40) + '...';
           document.getElementById('spotifyData').innerHTML = spotifyData
         }
