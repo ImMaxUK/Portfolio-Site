@@ -27,6 +27,7 @@ var results = lanyard({
       var spotifyData = `${data.spotify.song}, ${data.spotify.artist}`
       if (spotifyData.length > 40) spotifyData = spotifyData.substring(0, 40) + '...';
       document.getElementById('spotifyData').innerHTML = spotifyData
+      document.getElementById('spotifyData').href = 'https://open.spotify.com/track/'+data.spotify.track_id;
     }
   }
 });
